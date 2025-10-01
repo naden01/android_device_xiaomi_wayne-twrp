@@ -15,7 +15,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_wayne.mk
+    $(LOCAL_DIR)/pb_wayne.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_wayne-eng
+    pb_wayne-eng
