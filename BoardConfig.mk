@@ -129,7 +129,7 @@ BOARD_USES_METADATA_PARTITION := true
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # TWRP specific build flags
-TW_DEVICE_VERSION := wayne by xiaoleGun
+TW_DEVICE_VERSION := Nazephyrus | xiaolegun
 BOARD_HAS_NO_REAL_SDCARD := true
 TW_THEME := portrait_hdpi
 TW_DEFAULT_LANGUAGE := en
@@ -156,21 +156,6 @@ TARGET_USES_LOGD := true
 TARGET_RECOVERY_DEVICE_MODULES += debuggerd
 TW_RECOVERY_ADDITIONAL_RELINK_FILES += $(TARGET_OUT_EXECUTABLES)/debuggerd
 
-# SHRP
-SHRP_PATH := device/xiaomi/wayne
-SHRP_MAINTAINER := Nazephyrus | xiaolegun
-SHRP_DEVICE_CODE := wayne
-SHRP_EDL_MODE := 1
-SHRP_INTERNAL := /sdcard
-SHRP_OTG := /usb_otg
-SHRP_FLASH := 1
-SHRP_FLASH_MAX_BRIGHTNESS := 200
-SHRP_REC := /dev/block/bootdevice/by-name/recovery
-SHRP_AB := false
-SHRP_REC_TYPE := Treble
-SHRP_DEVICE_TYPE := A_Only
-SHRP_STATUSBAR_RIGHT_PADDING := 40
-SHRP_STATUSBAR_LEFT_PADDING := 40
-SHRP_EXPRESS := true
-SHRP_OFFICIAL := false
-SHRP_DARK := true
+# PBRP specific build flags
+PB_DISABLE_DEFAULT_DM_VERITY := true
+PB_DISABLE_DEFAULT_TREBLE_COMP := true
