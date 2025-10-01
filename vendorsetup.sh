@@ -94,24 +94,24 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_SUPPORT_ALL_PAYLOAD_OTA_UPDATES=1
 
 	# screen settings
-	#export OF_SCREEN_H=2280
-	#export OF_STATUS_H=80
-	#export OF_STATUS_INDENT_LEFT=48
-	#export OF_STATUS_INDENT_RIGHT=48
-	export OF_NO_SPLASH_CHANGE=1
-	
+	export OF_SCREEN_H=2436
+	export OF_STATUS_H=95
+	export OF_STATUS_INDENT_LEFT=48
+	export OF_STATUS_INDENT_RIGHT=48
+
 	# default keymaster service version
 	 export OF_DEFAULT_KEYMASTER_VERSION=3.0
 
     # -- add settings for R11 --
-	export FOX_R11=1
 	export OF_SKIP_MULTIUSER_FOLDERS_BACKUP=0
 	export OF_QUICK_BACKUP_LIST="/boot;/dtbo;/data;/system_image;/vendor_image;"
 	# -- end R11 settings --
 
-	# Redmi 7/Y3 specific
-	export FOX_BUILD_TYPE="Beta"
-	export OF_MAINTAINER=nazephyrus
+	# mi 6x specific
+	export OF_MAINTAINER_AVATAR="$(gettop)/device/xiaomi/wayne/maintainer_avatar.png"
+	cp "${OF_MAINTAINER_AVATAR}" "$(gettop)/bootable/recovery/gui/theme/portrait_hdpi/images/Default/About/maintainer.png"
+	export FOX_BUILD_TYPE="stable"
+	export OF_MAINTAINER=nazephyrus | xiaolegun
 
 	# let's see what are our build VARs
 	if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then
